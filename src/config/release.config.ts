@@ -61,7 +61,7 @@ const options: Options = {
 
 export const master: Options = {
   ...options,
-  branches: ['master'],
+  branches: ['main'],
 };
 export const release: (branches: string | string[]) => SemanticRelease.Options = (branches: string | string[]) =>
   ({ ...options, branches } as Options);
