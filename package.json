@@ -1,0 +1,52 @@
+{
+  "name": "@game-action/config",
+  "version": "0.0.0",
+  "description": "Common configuration files for GameAction projects",
+  "files": [
+    "build"
+  ],
+  "types": "build/index.d.ts",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "rimraf ./build && tsc && yarn copy-helpers",
+    "copy-helpers": "mkdir -p build/config/helpers && cp -r src/config/helpers build/config",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/game-action/config.git"
+  },
+  "author": "Rémy BRUYERE <me@remy.ovh> (https://remy.ovh)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/game-action/config/issues"
+  },
+  "homepage": "https://github.com/game-action/config#readme",
+  "dependencies": {
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/git": "^9.0.0",
+    "@semantic-release/github": "^7.2.0",
+    "@semantic-release/npm": "^7.0.9",
+    "dateformat": "^4.3.1",
+    "semantic-release": "^17.3.0",
+    "semantic-release-gitmoji": "^1.3.4"
+  },
+  "devDependencies": {
+    "@types/dateformat": "^3.0.1",
+    "@types/prettier": "^2.1.5",
+    "@types/semantic-release": "^17.2.0",
+    "@typescript-eslint/eslint-plugin": "^4.10.0",
+    "@typescript-eslint/parser": "^4.10.0",
+    "eslint": "^7.16.0",
+    "eslint-config-prettier": "^7.1.0",
+    "eslint-plugin-prettier": "^3.3.0",
+    "prettier": "^2.2.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.1.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
